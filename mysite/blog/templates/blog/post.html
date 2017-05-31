@@ -1,0 +1,7 @@
+{% extends "personal/header.html" %}
+<!-- safe enables us to use html in text. But if the blog is to be made public then safe should be removed. -->
+{% block content %}
+<h3>{{post.title}}</h3>
+<h6>on {{post.date}}</h6>
+{{post.body|safe|linebreaks}}    
+{% endblock %}
